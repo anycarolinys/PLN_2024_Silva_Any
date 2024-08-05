@@ -1,30 +1,25 @@
-# PLN_2024_Silva_Any
+# Atividade 1 – Criação de Embeddings
 
-1) Escolha um conjunto de dados disponível nos links a seguir que contenha no mínimo 10.000 registros. Consulte
-a lista de conjuntos de dados já escolhidos pela turma para certificar-se de que o conjunto por você selecionado ainda não foi escolhido. Inclua o nome do conjunto de dados e a url de acesso na thread disponibilizada no Google Classroom da disciplina
-para esta finalidade.
+Passo a passo:  
 
-https://dadosabertos.bcb.gov.br/dataset
+1. Escolher o conjunto de dados e um modelo de *Sentence Transformers* no 🤗Hugging Face🤗.
 
-https://www.tesourotransparente.gov.br/ckan/dataset
+2. Criar repositório com um ambiente virtual Python e a lista de bibliotecas necessárias no no arquivo ```requirements.txt```.
 
-2) Escolha um dos modelos disponíveis no Hugging Face utilizando os filtros “sentence-tranformers” e “portuguese” para
-que este modelo seja utilizado para a criação dos embeddings.
+3. Selecionar o ambiente virtual como kernel a ser utilizado pela IDE.
 
-3) Utilize o modelo selecionado para converter o conjunto selecionado para embeddings.
+3. Instalar as bibliotecas no ambiente virtual com ```pip install -r requirements.txt```.
 
-4) Instale um banco de dados vetorial (por exemplo, Milvus ou Chroma) e armazene os embeddings criados neste banco.
+4. Resolver erro com os pacotes *torch* e *sentence_transformers* com a instalação do [Visual Studio para C/C++](https://visualstudio.microsoft.com/pt-br/vs/features/cplusplus/).
 
-Consulte uma lista de bancos de dados vetoriais na url abaixo:
+5. Buscar formas de concatenar o texto como uma única sentença.
 
-https://medium.com/google-cloud/vector-databases-are-all-the-rage-872c888fa348
+6. Gerar *embeddings* com a lista de sentenças geradas.
 
-5) Utilize uma estrutura de índice no banco de dados vetorial para fazer consultas aos registros armazenados no banco usando recursos de similaridade semântica. Crie um cenário da necessidade de busca por registros para atender alguma necessidade específica e que exemplifique o uso da similaridade semântica como uma alternativa mais efetiva que uma consulta em um banco de dados tradicional.
+7. Configurar um servidor do banco de dados vetorial Milvus utilizando Docker Compose.
 
-Passo a passo:
-1. Escolher o dataset e o modelo
-2. Criar repositório com a máquina virtual e a lista de bibliotecas necessárias no requirements.txt.
-3. Configurar o ambiente para usar a máquina virtual como kernel
-3. Instalar as bibliotecas com pip install -r requirements.txt
-4. Resolver problema com o sentence_transformers na instalação do Visua Studio https://visualstudio.microsoft.com/pt-br/vs/features/cplusplus/
-5. Buscar formas de concatenar o texto como uma única sentença
+8. Criar uma coleção e um índice para o Milvus.
+
+9. Armazenar os *embeddings* gerados no Milvus.
+
+10. Realizar buscas de similaridade semântica na coleção criada.
